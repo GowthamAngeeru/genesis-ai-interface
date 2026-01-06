@@ -1,6 +1,6 @@
 import type { Point } from "./cursor-math";
 
-const CORTEX_URL = "http://localhost:8000";
+const CORTEX_URL = process.env.NEXT_PUBLIC_CORTEX_URL || "http://localhost:8000";
 
 export async function sendSignalToCortex(history: Point[], type: "THRASHING" | "RAGE_CLICK") {
     try {
